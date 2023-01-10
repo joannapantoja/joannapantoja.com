@@ -4,10 +4,188 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joanna Pantoja</title>
+    <title>Gardening🌷</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(255, 200, 124) 0%,
+          rgb(252, 251, 121) 90%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+        color: green;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid green;
+        background: peachpuff;
+        font-size: 16px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: gray;
+      }
+      .theme-button {
+        font-size: 12px;
+        background-image: none;
+        background-repeat: none;
+        color: black;
+        text-align: center;
+        padding: 4 10px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: peach;
+      }
+      .container {
+        max-width: 600px;
+        padding: 20px;
+        margin: 20px auto;
+        background: wheat;
+        border-radius: 10px;
+      }
+
+      .tulip-field-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .tulip-field-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .seeds-being-planted {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .seeds-being-planted:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .growing-bamboo {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .growing-bamboo:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/823/original/dark_leaves.jpeg?1673152512");
+        background-size: cover;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+        color: wheat;
+      }
+
+      .dark a {
+        color: green;
+      }
+    </style>
   </head>
   <body>
-    Hello!
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>Gardening🍎</h1>
+      <h2>A relaxing hobby</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/604/original/tulips1.jpeg?1672959881"
+        alt=""
+        class="tulip-field-picture"
+      />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/605/original/growing2.jpeg?1672959892"
+          alt=""
+          class="seeds-being-planted"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/606/original/bamboo3.jpeg?1672959907"
+          alt=""
+          class="growing-bamboo"
+        />
+      </div>
+      <button>
+        <a href="https://www.provenwinners.com/gardening-ideas" target="_blank"
+          >Gardening Ideas</a
+        >
+      </button>
+      <p>
+        Gardening, in what I have experienced, is the act of patience and an
+        oasis from the world. Simply put; one digs a whole to put in a seed and
+        now is responsible for putting in the effort of nourishing it and
+        adjusting the environment to care for the plant that comes up. Bamboo
+        for example takes 5 years to sprout🌱 while most vegetable seeds sprout
+        within days!
+      </p>
+    </div>
+    <footer>
+      👩‍💻Coded by
+      <a href="http://joannapantoja.com/" target="_blank"> Joanna Pantoja </a>
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
-</html>
+</html
 
